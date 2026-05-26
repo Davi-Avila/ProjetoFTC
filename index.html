@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FTC Robot Game</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- TABULEIRO -->
+        <section id="tabuleiro">
+
+            <!-- GRID -->
+            <div id="grid"></div>
+
+            <!-- CAMADA DOS OBJETOS -->
+            <div id="objetos">
+
+                <div id="robo"></div>
+
+                <div class="bola" id="bola1"></div>
+                <div class="bola" id="bola2"></div>
+
+                <div id="deposito"></div>
+
+            </div>
+
+        </section>
+
+        <!-- MENU LATERAL -->
+        <aside class="controls">
+
+            <h2>Comandos</h2>
+
+            <div class="buttons">
+
+                <button onclick="adicionarComando('frente')">
+                    Frente
+                </button>
+
+                <button onclick="adicionarComando('virar-esquerda')">
+                    Esquerda
+                </button>
+
+                <button onclick="adicionarComando('virar-direita')">
+                    Direita
+                </button>
+
+                <button onclick="adicionarComando('pegar')">
+                    Pegar
+                </button>
+
+                <button onclick="adicionarComando('depositar')">
+                    Depositar
+                </button>
+
+            </div>
+
+            <!-- LISTA DE COMANDOS -->
+            <div id="lista-comandos">
+
+                <h3>Sequência</h3>
+
+                <ul id="commands">
+                </ul>
+            </div>
+
+            <!-- BOTÕES -->
+            <div class="action-buttons">
+
+                <button id="run-btn" onclick="executarComandos()">
+                    ▶ Executar
+                </button>
+
+                <button id="clear-btn" onclick="clearCommands()">
+                    🗑 Limpar
+                </button>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
